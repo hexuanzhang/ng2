@@ -23,4 +23,13 @@ export class NgClassComponent implements OnInit {
 	ngOnInit() {
 		this.isActive = true;
 	}
+	
+	calculateClasses() {
+		
+		/* 可以返回 string、string[]、obj */
+		return {
+			btn: true,
+			'btn-primary': this.isActive
+		}
+	}
 }
