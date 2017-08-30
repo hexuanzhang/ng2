@@ -1,27 +1,45 @@
-<ul nz-menu [nzMode]="'inline'" class="menu">
-	<li *ngFor="let item of menu" nz-submenu>
-		<span title>
-			<i class="anticon anticon-appstore"></i>
-			{{item.name}}
-		</span>
-		<ul *ngIf="item.children">
-			<ng-template ngFor let-child [ngForOf]="item.children">
-				<div *ngIf="child.children; then submenu else menuItem"></div>
-				
-				<ng-template #submenu>
-					<li nz-submenu>
-						<span title>{{child.name}}</span>
-						<ul>
-							<li *ngFor="let subChild of child.children" nz-menu-item>{{subChild.name}}</li>
-						</ul>
-					</li>
-				</ng-template>
-				
-				<ng-template #menuItem>
-					<li nz-menu-item>{{child.name}}</li>
-				</ng-template>
-			</ng-template>
+<nz-layout>
+	<nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+		<ul nz-menu [nzMode]="'inline'" class="menu">
+			<li *ngFor="let item of menu" nz-submenu>
+				<span title>
+					<i class="anticon anticon-appstore"></i>
+					{{item.name}}
+				</span>
+				<ul *ngIf="item.children">
+					<ng-template ngFor let-child [ngForOf]="item.children">
+						<div *ngIf="child.children; then submenu else menuItem"></div>
+						
+						<ng-template #submenu>
+							<li nz-submenu>
+								<span title>{{child.name}}</span>
+								<ul>
+									<li *ngFor="let subChild of child.children" nz-menu-item>{{subChild.name}}</li>
+								</ul>
+							</li>
+						</ng-template>
+						
+						<ng-template #menuItem>
+							<li nz-menu-item>{{child.name}}</li>
+						</ng-template>
+					</ng-template>
+				</ul>
+			</li>
 		</ul>
-	</li>
-</ul>
+	</nz-sider>
+	<nz-layout>
+		<nz-header class="nz-header">
+			<i class="anticon trigger" [class.anticon-menu-fold]="!isCollapsed" [class.anticon-menu-unfold]="isCollapsed" (click)="isCollapsed=!isCollapsed"></i>
+		</nz-header>
+		<nz-content class="nz-content">
+			<div class="content">
+				<router-outlet></router-outlet>
+			</div>
+		</nz-content>
+	</nz-layout>
+</nz-layout>
+
+
+
+
 

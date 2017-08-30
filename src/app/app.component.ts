@@ -11,4 +11,5 @@ export class AppComponent {
 	constructor() {}
 	
 	menu: any[] = menus;
+	isCollapsed: boolean = false;
 }

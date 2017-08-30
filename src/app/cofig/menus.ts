@@ -1,5 +1,8 @@
 export const menus = [
 	{
+		name: 'index'
+	},
+	{
 		name: 'directive',
 		children: [
 			{
