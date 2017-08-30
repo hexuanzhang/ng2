@@ -1,4 +1,5 @@
 <p [ngClass]="'blue'">string</p>
 <p [ngClass]="['disabled']">array</p>
 <p [ngClass]="{ active: isActive }">object</p>
-<p [ngClass]="calculateClasses()"></p>
+<p [class.active]="isActive">params</p>
+<p [ngClass]="calculateClasses()">function</p>
