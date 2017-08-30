@@ -1,30 +1,45 @@
 <nz-layout>
 	<nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
 		<ul nz-menu [nzMode]="'inline'" class="menu">
-			<li *ngFor="let item of menu" nz-submenu>
-				<span title>
-					<i class="anticon anticon-appstore"></i>
-					{{item.name}}
-				</span>
-				<ul *ngIf="item.children">
-					<ng-template ngFor let-child [ngForOf]="item.children">
-						<div *ngIf="child.children; then submenu else menuItem"></div>
-						
-						<ng-template #submenu>
-							<li nz-submenu>
-								<span title>{{child.name}}</span>
-								<ul>
-									<li *ngFor="let subChild of child.children" nz-menu-item>{{subChild.name}}</li>
-								</ul>
-							</li>
-						</ng-template>
-						
-						<ng-template #menuItem>
-							<li nz-menu-item>{{child.name}}</li>
-						</ng-template>
-					</ng-template>
-				</ul>
-			</li>
+			<ng-template ngFor let-item [ngForOf]="menu">
+				<div *ngIf="item.children; then menus else items"></div>
+				
+				<ng-template #menus>
+					<li nz-submenu>
+						<span title>
+							<i class="anticon anticon-appstore"></i>
+							{{item.name}}
+						</span>
+						<ul *ngIf="item.children">
+							<ng-template ngFor let-child [ngForOf]="item.children">
+								<div *ngIf="child.children; then submenu else menuItem"></div>
+								
+								<ng-template #submenu>
+									<li nz-submenu>
+										<span title>{{child.name}}</span>
+										<ul>
+											<li *ngFor="let subChild of child.children" nz-menu-item>{{subChild.name}}</li>
+										</ul>
+									</li>
+								</ng-template>
+								
+								<ng-template #menuItem>
+									<li nz-menu-item>{{child.name}}</li>
+								</ng-template>
+							</ng-template>
+						</ul>
+					</li>
+				</ng-template>
+
+				<ng-template #items>
+					<li nz-menu-item>
+						<span title>
+							<i class="anticon anticon-appstore"></i>
+							{{item.name}}
+						</span>
+					</li>
+				</ng-template>
+			</ng-template>
 		</ul>
 	</nz-sider>
 	<nz-layout>
