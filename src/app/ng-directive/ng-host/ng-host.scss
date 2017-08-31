@@ -14,4 +14,10 @@
 			margin: 10px 0;
 		}
 	}
+	
+	/deep/ {
+		h3 {
+			color: blue;
+		}
+	}
 }
