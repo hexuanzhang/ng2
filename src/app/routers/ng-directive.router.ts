@@ -20,6 +20,10 @@ let childrenComponents = [
 		loadChildren: '../ng-directive/ng-for/ng-for.module#NgForModule'
 	},
 	{
+		path: 'ng-if',
+		loadChildren: '../ng-directive/ng-if/ng-if.module#NgIfModule'
+	},
+	{
 		path: '**',
 		redirectTo: 'ng-class'
 	}

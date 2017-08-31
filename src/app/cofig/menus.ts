@@ -20,6 +20,10 @@ export const menus = [
 				router: 'ng-for'
 			},
 			{
+				name: 'if 指令',
+				router: 'ng-if'
+			},
+			{
 				name: '选择器',
 				router: 'pseudo-class',
 				children: [
