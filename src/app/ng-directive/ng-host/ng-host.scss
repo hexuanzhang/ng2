@@ -1,0 +1,17 @@
+:host {
+	font-size: 13px;
+	
+	h3 {
+		color: #03a9f4;
+	}
+	
+	::ng-deep {
+		h3 {
+			color: blue;
+		}
+		
+		p {
+			margin: 10px 0;
+		}
+	}
+}

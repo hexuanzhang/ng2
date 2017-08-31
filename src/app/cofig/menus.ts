@@ -32,10 +32,6 @@ export const menus = [
 						router: 'host'
 					},
 					{
-						name: '::ng-deep',
-						router: 'ng-deep'
-					},
-					{
 						name: ':host-context',
 						router: 'host-context'
 					}

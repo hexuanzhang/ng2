@@ -24,6 +24,10 @@ let childrenComponents = [
 		loadChildren: '../ng-directive/ng-if/ng-if.module#NgIfModule'
 	},
 	{
+		path: 'host',
+		loadChildren: '../ng-directive/ng-host/ng-host.module#NgHostModule'
+	},
+	{
 		path: '**',
 		redirectTo: 'ng-class'
 	}
