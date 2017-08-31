@@ -29,11 +29,11 @@ export const menus = [
 				children: [
 					{
 						name: ':host',
-						router: 'host'
+						router: 'ng-host'
 					},
 					{
 						name: ':host-context',
-						router: 'host-context'
+						router: 'ng-host-context'
 					}
 				]
 			}

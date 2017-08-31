@@ -24,8 +24,12 @@ let childrenComponents = [
 		loadChildren: '../ng-directive/ng-if/ng-if.module#NgIfModule'
 	},
 	{
-		path: 'host',
+		path: 'ng-host',
 		loadChildren: '../ng-directive/ng-host/ng-host.module#NgHostModule'
+	},
+	{
+		path: 'ng-host-context',
+		loadChildren: '../ng-directive/ng-host-context/ng-host-context.module#NgHostContextModule'
 	},
 	{
 		path: '**',
