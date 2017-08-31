@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 
 import { AppRoutingModule } from './app.router';
+import { SharedModule } from './shared/shared.module'
 
 import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component'
@@ -19,6 +20,7 @@ import { IndexComponent } from './index/index.component'
 		BrowserModule,
 		HttpModule,
 		BrowserAnimationsModule,
+		SharedModule.share(),
 		NgZorroAntdModule.forRoot()
 	],
 	providers: [],

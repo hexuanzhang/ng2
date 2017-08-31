@@ -18,21 +18,29 @@
 									<li nz-submenu>
 										<span title>{{child.name}}</span>
 										<ul>
-											<li *ngFor="let subChild of child.children" nz-menu-item>{{subChild.name}}</li>
+											<li *ngFor="let subChild of child.children" nz-menu-item
+											    [routerLink]="['/' + item.router + '/' + subChild.router]"
+											    [routerLinkActive]="'ant-menu-item-selected'">
+												{{subChild.name}}
+											</li>
 										</ul>
 									</li>
 								</ng-template>
 								
 								<ng-template #menuItem>
-									<li nz-menu-item>{{child.name}}</li>
+									<li nz-menu-item [routerLinkActive]="'ant-menu-item-selected'"
+									    [routerLink]="['/' + item.router + '/' + child.router]">
+										{{child.name}}
+									</li>
 								</ng-template>
 							</ng-template>
 						</ul>
 					</li>
 				</ng-template>
-
+				
 				<ng-template #items>
-					<li nz-menu-item>
+					<li nz-menu-item [routerLinkActive]="'ant-menu-item-selected'"
+					    [routerLinkActive]="'ant-menu-item-selected'">
 						<span title>
 							<i class="anticon anticon-appstore"></i>
 							{{item.name}}
@@ -43,9 +51,7 @@
 		</ul>
 	</nz-sider>
 	<nz-layout>
-		<nz-header class="nz-header">
-			<i class="anticon trigger" [class.anticon-menu-fold]="!isCollapsed" [class.anticon-menu-unfold]="isCollapsed" (click)="isCollapsed=!isCollapsed"></i>
-		</nz-header>
+		<nz-header class="nz-header"></nz-header>
 		<nz-content class="nz-content">
 			<div class="content">
 				<router-outlet></router-outlet>

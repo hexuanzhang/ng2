@@ -4,6 +4,9 @@ import { Component, OnInit } from '@angular/core';
 	selector: 'ng-class',
 	templateUrl: './ng-class.html',
 	styles: [`
+		p {
+			margin: 10px  0;
+		}
 		.blue {
 			color: blue;
 		}

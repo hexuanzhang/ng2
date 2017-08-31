@@ -1,27 +1,39 @@
 export const menus = [
 	{
-		name: 'index'
+		name: '首页',
+		router: 'index'
 	},
 	{
-		name: 'directive',
+		name: '内置指令',
+		router: 'directive',
 		children: [
 			{
-				name: 'ng-class'
+				name: 'class 指令',
+				router: 'ng-class'
 			},
 			{
-				name: 'ng-style'
+				name: 'style 指令',
+				router: 'ng-style'
 			},
 			{
-				name: '伪类选择器',
+				name: 'for 指令',
+				router: 'ng-for'
+			},
+			{
+				name: '选择器',
+				router: 'pseudo-class',
 				children: [
 					{
-						name: ':host'
+						name: ':host',
+						router: 'host'
 					},
 					{
-						name: '::ng-deep'
+						name: '::ng-deep',
+						router: 'ng-deep'
 					},
 					{
-						name: ':host-context'
+						name: ':host-context',
+						router: 'host-context'
 					}
 				]
 			}

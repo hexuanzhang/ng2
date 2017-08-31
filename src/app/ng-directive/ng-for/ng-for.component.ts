@@ -16,7 +16,7 @@ export class NgForComponent implements OnInit {
 			{ name: 'JS',  selected: true, id: 12 },
 			{ name: 'CSS',  selected: false, id: 2 },
 		]
-	}
+	};
 	form: any;
 	
 	ngOnInit () {
@@ -105,7 +105,7 @@ export class NgForComponent implements OnInit {
 	buildSkills() {
 		const _skill = this.user.skills.map(item => {
 			return this.fb.control(item.selected);
-		})
+		});
 		return this.fb.array(_skill);
 	}
 	

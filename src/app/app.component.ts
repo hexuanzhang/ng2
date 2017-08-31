@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { menus } from './cofig/menus';
 
@@ -7,9 +7,10 @@ import { menus } from './cofig/menus';
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 	constructor() {}
 	
 	menu: any[] = menus;
-	isCollapsed: boolean = false;
+	
+	ngOnInit() {}
 }
