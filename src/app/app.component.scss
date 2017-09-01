@@ -3,51 +3,54 @@
 		.ant-layout {
 			height: 100%;
 		}
-		
+
 		.ant-layout-sider {
 			background: #fff;
 		}
-		
+
 		.ant-layout-sider-collapsed {
 			.nav-text {
 				display: none;
 			}
-			
+
 			.ant-menu-submenu-title {
 				&:after {
 					display: none;
 				}
 			}
-			
+
 			.anticon {
 				font-size: 16px;
+
 				margin-left: 8px;
 			}
 		}
-		
+
 		.trigger {
 			font-size: 18px;
 			line-height: 64px;
+
 			padding: 0 16px;
+
 			cursor: pointer;
 			transition: color .3s;
-			
+
 			&:hover {
 				color: #108ee9;
 			}
 		}
 	}
-	
 }
 
 .nz-header {
-	background-color: #fff;
 	padding: 0;
+
+	background-color: #fff;
 }
 
 .nz-content {
-	margin: 20px;
 	height: calc(100% - 64px);
+	margin: 20px;
 }
 
 .menu {
@@ -55,7 +58,8 @@
 }
 
 .content {
-	padding: 30px;
-	background: #fff;
 	height: 100%;
+	padding: 30px;
+
+	background: #fff;
 }
