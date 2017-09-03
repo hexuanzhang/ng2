@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { SharedModule } from '../../shared/shared.module';
 import { HostListenerComponent } from './hostListener.component';
 import { HostListenerDirective } from './hostListener.directive';
-import { SharedModule } from '../../shared/shared.module';
+import { HighlightDirective } from './highlight.directive'
 
 const component = HostListenerComponent;
 
@@ -21,10 +22,9 @@ const UIRouting = RouterModule.forChild(UIRouters);
 export class RoutingModule {
 }
 
-
 @NgModule({
 	imports: [RoutingModule, SharedModule.share()],
-	declarations: [component, HostListenerDirective],
+	declarations: [component, HostListenerDirective, HighlightDirective],
 	providers: []
 })
 
