@@ -3,18 +3,20 @@ import { Component, Input, HostBinding } from '@angular/core';
 @Component({
 	selector: 'my-button',
 	template: `
-		<div>
-			My width is {{150}}
-		</div>
-	`
+		<button buttonHover>hostBinding</button>
+	`,
+	styles: [`
+		button {
+			color: #03a9f4;
+		}
+		
+		button.hover {
+			color: blue;
+		}
+	`]
 })
-export class ButtonComponent {
-	
-	@HostBinding('style.width.px')
-	@Input() boxWidth: number;
-	
+export class HostBindingComponent {
 	constructor() {
-		this.boxWidth = 150;
 	}
 	
 }

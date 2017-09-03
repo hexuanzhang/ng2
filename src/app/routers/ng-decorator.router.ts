@@ -5,7 +5,11 @@ import { NgModule } from '@angular/core';
 let childrenComponents = [
 	{
 		path: 'hostListener',
-		loadChildren: '../ng-decorator/hostListener/hostListener.module#NgClassModule'
+		loadChildren: '../ng-decorator/hostListener/hostListener.module#HostListenerModule'
+	},
+	{
+		path: 'hostBinding',
+		loadChildren: '../ng-decorator/hostBinding/hostBinding.module#HostBindingModule'
 	},
 	{
 		path: '**',

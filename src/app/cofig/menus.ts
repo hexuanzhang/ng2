@@ -46,6 +46,10 @@ export const menus = [
 			{
 				name: 'hostListener',
 				router: 'hostListener'
+			},
+			{
+				name: 'hostBinding',
+				router: 'hostBinding'
 			}
 		]
 	}
