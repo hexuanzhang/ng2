@@ -17,6 +17,12 @@ export const AppRoutes: Routes = [
 		loadChildren: './ng-directive/ng-directive.module#NgDirectiveModule'
 	},
 	
+	// 装饰器
+	{
+		path: 'decorator',
+		loadChildren: './ng-decorator/ng-decorator.module#NgDecoratorModule'
+	},
+	
 	// 默认重定向到首页
 	{
 		path: '**',

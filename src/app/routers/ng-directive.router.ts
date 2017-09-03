@@ -37,7 +37,7 @@ let childrenComponents = [
 	}
 ];
 
-export const AgDirectiveRouters: Routes = [
+export const NgDirectiveRouters: Routes = [
 	{
 		path: '',
 		component: NgDirectiveComponent,
@@ -46,7 +46,7 @@ export const AgDirectiveRouters: Routes = [
 ];
 
 @NgModule({
-	imports: [RouterModule.forChild(AgDirectiveRouters)],
+	imports: [RouterModule.forChild(NgDirectiveRouters)],
 	exports: [RouterModule]
 })
 export class NgDirectiveRoutingModule {

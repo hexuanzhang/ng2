@@ -38,5 +38,15 @@ export const menus = [
 				]
 			}
 		]
+	},
+	{
+		name: '装饰器',
+		router: 'decorator',
+		children: [
+			{
+				name: 'hostListener',
+				router: 'hostListener'
+			}
+		]
 	}
 ];

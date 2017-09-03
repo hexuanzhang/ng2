@@ -1,12 +1,12 @@
-import { Component, Input, HostListener } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
 	selector: 'my-button',
 	template: `
-		<div>{{time}}</div>
+		<button count>点击按钮</button>
 	`
 })
-export class ButtonComponent {
+export class HostListenerComponent {
 	
 	time: any;
 	
