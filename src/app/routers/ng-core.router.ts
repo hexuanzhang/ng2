@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 let childrenComponents = [
 	{
 		path: 'viewChild',
-		loadChildren: '../ng-decorator/hostListener/hostListener.module#HostListenerModule'
+		loadChildren: '../ng-core/viewChild/viewChild.module#ViewChildModule'
 	},
 	{
 		path: '**',
