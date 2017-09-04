@@ -23,6 +23,12 @@ export const AppRoutes: Routes = [
 		loadChildren: './ng-decorator/ng-decorator.module#NgDecoratorModule'
 	},
 	
+	// core
+	{
+		path: 'core',
+		loadChildren: './ng-core/ng-core.module#NgCoreModule'
+	},
+	
 	// 默认重定向到首页
 	{
 		path: '**',

@@ -52,5 +52,15 @@ export const menus = [
 				router: 'hostBinding'
 			}
 		]
+	},
+	{
+		name: 'core',
+		router: 'core',
+		children: [
+			{
+				name: 'viewChild',
+				router: 'viewChild'
+			}
+		]
 	}
 ];
