@@ -1,18 +1,27 @@
 import { Component, ViewChild } from '@angular/core';
 import { NumberComponent } from './number.component';
+import { ChangeColorDirective } from './changeColor.directive';
 
 @Component({
 	selector: 'viewChild',
-	templateUrl: './viewChild.html'
+	templateUrl: './viewChild.html',
+	styleUrls: ['./viewChild.scss']
 })
 export class ViewChildComponent {
-	@ViewChild(NumberComponent) numberComponent: NumberComponent;
+	
+	@ViewChild(NumberComponent) number: NumberComponent;
+	
+	@ViewChild(ChangeColorDirective) color: ChangeColorDirective;
 	
 	increase() {
-		this.numberComponent.increaseByOne();
+		this.number.increaseByOne();
 	}
 	
 	decrease() {
-		this.numberComponent.decreaseByOne();
+		this.number.decreaseByOne();
+	}
+	
+	changeColor(color: string) {
+		this.color.change(color);
 	}
 }

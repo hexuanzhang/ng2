@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SharedModule } from '../../shared/shared.module';
 import { ViewChildComponent } from './viewChild.component';
 import { NumberComponent } from './number.component';
+import { ChangeColorDirective } from './changeColor.directive'
 
 const component = ViewChildComponent;
 
@@ -23,7 +24,7 @@ export class RoutingModule {
 
 @NgModule({
 	imports: [RoutingModule, SharedModule.share()],
-	declarations: [component, NumberComponent],
+	declarations: [component, NumberComponent, ChangeColorDirective],
 	providers: []
 })
 

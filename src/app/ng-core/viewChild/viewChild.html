@@ -1,4 +1,18 @@
-<button type="button" (click)="increase()">增加</button>
-<button type="button" (click)="decrease()">减少</button>
-<br/><br/>
-<app-number></app-number>
+<div class="container">
+	<div class="header">
+		<button nz-button [nzType]="'primary'" (click)="increase()">增加</button>
+		<button nz-button (click)="decrease()">减少</button>
+	</div>
+	<div class="content">
+		<app-number></app-number>
+	</div>
+</div>
+<div class="container">
+	<div class="header">
+		<button nz-button [nzType]="'primary'" (click)="changeColor('#03a9f4')">浅蓝色</button>
+		<button nz-button (click)="changeColor('blue')">深蓝色</button>
+	</div>
+	<div class="content">
+		<p v-color>改变字体颜色</p>
+	</div>
+</div>
