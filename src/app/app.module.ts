@@ -20,8 +20,7 @@ import { IndexComponent } from './index/index.component'
 		BrowserModule,
 		HttpModule,
 		BrowserAnimationsModule,
-		SharedModule.share(),
-		NgZorroAntdModule.forRoot()
+		SharedModule.share()
 	],
 	providers: [],
 	bootstrap: [AppComponent]
