@@ -36,6 +36,10 @@ export const menus = [
 						router: 'ng-host-context'
 					}
 				]
+			},
+			{
+				name: 'hidden 指令',
+				router: 'ng-hidden'
 			}
 		]
 	},

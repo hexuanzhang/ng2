@@ -32,6 +32,10 @@ let childrenComponents = [
 		loadChildren: '../ng-directive/ng-host-context/ng-host-context.module#NgHostContextModule'
 	},
 	{
+		path: 'ng-hidden',
+		loadChildren: '../ng-directive/ng-hidden/ng-hidden.module#NgHiddenModule'
+	},
+	{
 		path: '**',
 		redirectTo: 'ng-class'
 	}
