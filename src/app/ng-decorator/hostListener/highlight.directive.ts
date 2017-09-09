@@ -8,8 +8,8 @@ export class HighlightDirective {
 	}
 	
 	@HostListener('document:click', ['$event'])
-	onClick(btn: Event) {
-		if (this.el.nativeElement.contains(event.target)) {
+	onClick(e: Event) {
+		if (this.el.nativeElement.contains(e.target)) {
 			this.highlight('yellow');
 		} else {
 			this.highlight(null);
