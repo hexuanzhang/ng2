@@ -29,6 +29,11 @@ export const AppRoutes: Routes = [
 		loadChildren: './ng-core/ng-core.module#NgCoreModule'
 	},
 	
+	{
+		path: 'provider',
+		loadChildren: './ng-provider/ng-provider.module#NgProviderModule'
+	},
+	
 	// 默认重定向到首页
 	{
 		path: '**',

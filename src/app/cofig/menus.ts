@@ -66,5 +66,15 @@ export const menus = [
 				router: 'viewChild'
 			}
 		]
+	},
+	{
+		name: 'provider',
+		router: 'provider',
+		children: [
+			{
+				name: 'useClass',
+				router: 'useClass'
+			}
+		]
 	}
 ];
