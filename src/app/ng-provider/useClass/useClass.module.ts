@@ -20,7 +20,6 @@ const UIRouting = RouterModule.forChild(UIRouters);
 export class RoutingModule {
 }
 
-
 @NgModule({
 	imports: [RoutingModule, SharedModule.share()],
 	declarations: [component],
