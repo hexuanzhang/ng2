@@ -74,6 +74,18 @@ export const menus = [
 			{
 				name: 'useClass',
 				router: 'useClass'
+			},
+			{
+				name: 'useValue',
+				router: 'useValue'
+			},
+			{
+				name: 'stringToken',
+				router: 'stringToken'
+			},
+			{
+				name: 'opaqueToken',
+				router: 'opaqueToken'
 			}
 		]
 	}

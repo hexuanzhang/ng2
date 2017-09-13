@@ -8,6 +8,18 @@ let childrenComponents = [
 		loadChildren: '../ng-provider/useClass/useClass.module#UseClassModule'
 	},
 	{
+		path: 'useValue',
+		loadChildren: '../ng-provider/useValue/useValue.module#UseValueModule'
+	},
+	{
+		path: 'stringToken',
+		loadChildren: '../ng-provider/stringToken/stringToken.module#StringTokenModule'
+	},
+	{
+		path: 'opaqueToken',
+		loadChildren: '../ng-provider/opaqueToken/opaqueToken.module#OpaqueTokenModule'
+	},
+	{
 		path: '**',
 		redirectTo: 'useClass'
 	}
