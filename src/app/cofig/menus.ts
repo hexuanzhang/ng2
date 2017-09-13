@@ -84,6 +84,10 @@ export const menus = [
 				router: 'useExisting'
 			},
 			{
+				name: 'useFactory',
+				router: 'useFactory'
+			},
+			{
 				name: 'stringToken',
 				router: 'stringToken'
 			},
