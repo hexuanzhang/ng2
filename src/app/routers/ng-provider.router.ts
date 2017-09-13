@@ -12,6 +12,10 @@ let childrenComponents = [
 		loadChildren: '../ng-provider/useValue/useValue.module#UseValueModule'
 	},
 	{
+		path: 'useExisting',
+		loadChildren: '../ng-provider/useExisting/useExisting.module#UseExistingModule'
+	},
+	{
 		path: 'stringToken',
 		loadChildren: '../ng-provider/stringToken/stringToken.module#StringTokenModule'
 	},

@@ -80,6 +80,10 @@ export const menus = [
 				router: 'useValue'
 			},
 			{
+				name: 'useExisting',
+				router: 'useExisting'
+			},
+			{
 				name: 'stringToken',
 				router: 'stringToken'
 			},
