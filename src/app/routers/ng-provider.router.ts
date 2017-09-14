@@ -28,6 +28,10 @@ let childrenComponents = [
 		loadChildren: '../ng-provider/opaqueToken/opaqueToken.module#OpaqueTokenModule'
 	},
 	{
+		path: 'injection',
+		loadChildren: '../ng-provider/injection/injection.module#InjectionTokenModule'
+	},
+	{
 		path: '**',
 		redirectTo: 'useClass'
 	}

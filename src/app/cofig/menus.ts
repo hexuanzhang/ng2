@@ -94,6 +94,10 @@ export const menus = [
 			{
 				name: 'opaqueToken',
 				router: 'opaqueToken'
+			},
+			{
+				name: 'injectionToken',
+				router: 'injectionToken'
 			}
 		]
 	}
