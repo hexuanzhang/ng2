@@ -31,6 +31,10 @@ let childrenComponents = [
 		path: 'injectionToken',
 		loadChildren: '../ng-provider/injectionToken/injectionToken.module#InjectionTokenModule'
 	},
+  {
+    path: 'optional',
+    loadChildren: '../ng-provider/optional/optional.module#OptionalModule'
+  },
 	{
 		path: '**',
 		redirectTo: 'useClass'
