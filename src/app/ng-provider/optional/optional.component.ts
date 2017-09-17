@@ -4,6 +4,7 @@ import { LoggerService } from './logger.service';
 @Component({
 	selector: 'optional',
 	templateUrl: './optional.html',
+  // providers: []
 	providers: [LoggerService]
 })
 export class OptionalComponent implements OnInit {
