@@ -104,5 +104,15 @@ export const menus = [
         router: 'optional'
       }
 		]
-	}
+	},
+  {
+    name: 'di',
+    router: 'di',
+    children: [
+      {
+        name: 'reflectiveInjector',
+        value: 'reflectiveInjector'
+      }
+    ]
+  }
 ];

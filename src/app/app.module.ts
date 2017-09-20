@@ -8,12 +8,14 @@ import { AppRoutingModule } from './app.router';
 import { SharedModule } from './shared/shared.module'
 
 import { AppComponent } from './app.component';
-import { IndexComponent } from './index/index.component'
+import { IndexComponent } from './index/index.component';
+import { InjectorComponent } from './ng-di/injector/injector.component'
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		IndexComponent
+		IndexComponent,
+		InjectorComponent
 	],
 	imports: [
 		AppRoutingModule,
