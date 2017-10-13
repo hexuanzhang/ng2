@@ -40,12 +40,17 @@ export const AppRoutes: Routes = [
     loadChildren: './ng-di/ng-di.module#NgDiModule'
   },
 
+  // animation
+  {
+    path: 'animation',
+    loadChildren: './ng-animation/ng-animation.module#NgAnimationModule'
+  },
+
 	// 默认重定向到首页
 	{
 		path: '**',
 		redirectTo: 'index'
 	}
-
 ];
 
 @NgModule({
