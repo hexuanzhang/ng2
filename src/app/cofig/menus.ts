@@ -114,5 +114,15 @@ export const menus = [
         value: 'reflectiveInjector'
       }
     ]
+  },
+  {
+    name: 'animation',
+    router: 'animation',
+    children: [
+      {
+        name: 'loading',
+        value: 'loading'
+      }
+    ]
   }
 ];

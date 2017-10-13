@@ -4,12 +4,12 @@ import { NgModule } from '@angular/core';
 
 let childrenComponents = [
   {
-    path: 'viewChild',
-    loadChildren: '../ng-core/viewChild/viewChild.module#ViewChildModule'
+    path: 'loading',
+    loadChildren: '../ng-animation/loading/loading.module#LoadingModule'
   },
   {
     path: '**',
-    redirectTo: 'viewChild'
+    redirectTo: 'loading'
   }
 ];
 
