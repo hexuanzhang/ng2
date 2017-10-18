@@ -1,5 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
-import { trigger, state, transition, style, animate, AnimationEvent} from '@angular/animations';
+import { Component, OnInit } from '@angular/core';
 import { LoadingAnimations } from '../animation-config';
 
 @Component({
@@ -10,20 +9,15 @@ import { LoadingAnimations } from '../animation-config';
 })
 export class LoadingComponent implements OnInit {
 
-	constructor(public cdr: ChangeDetectorRef) {
+	constructor() {
 	}
 
-  loadingStatus: string;
+  loadingStatus: string = ''; 
 
 	ngOnInit() {
 	}
 
   toggleStatus() {
-    // this.loadingStatus = `${Math.random() * 100}`;
-    //this.detection();
-  }
-
-  detection() {
-	  this.cdr.detectChanges();
+    this.loadingStatus = this.loadingStatus === 'start' ? 'end': 'start';
   }
 }
