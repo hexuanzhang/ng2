@@ -1,4 +1,7 @@
-import { trigger, state, style, transition, animate, keyframes, animation, useAnimation, query } from  '@angular/animations';
+import {
+  trigger, state, style, transition, animate, keyframes, animation, useAnimation, query,
+  stagger
+} from '@angular/animations';
 
 // animations
 const Loading02Animation = animation([
@@ -40,7 +43,25 @@ export const Loading02Animations = [
 export const Loading04Animations = [
   trigger('loading04Trigger', [
     transition('void => *, end => start, start => end',[
-      query('.box-04 div', [loadingAnimate])
+      query('.box-04 div', [loadingAnimate], { optional: true })
+    ])
+  ])
+];
+
+export const ListAnimations = [
+  trigger('listTrigger', [
+    transition('* => *', [
+      query(":enter", style({opacity: 0}), {optional: true}),
+
+      query(':enter', stagger('150ms', [
+        animate('1000ms ease-in', style({opacity: 1}))
+      ]), {optional: true}),
+
+
+
+      query(':leave', stagger('100ms reverse', [
+        animate('100ms ease-out', style({opacity: 0}))
+      ]), {optional: true}),
     ])
   ])
 ];

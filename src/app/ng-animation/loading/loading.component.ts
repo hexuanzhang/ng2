@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Loading01Animations, Loading02Animations, Loading04Animations } from '../animation-config';
+import { Loading01Animations, Loading02Animations, Loading04Animations, ListAnimations } from '../animation-config';
 
 @Component({
 	selector: 'loading',
@@ -8,7 +8,8 @@ import { Loading01Animations, Loading02Animations, Loading04Animations } from '.
   animations: [
     Loading01Animations,
     Loading02Animations,
-    Loading04Animations
+    Loading04Animations,
+    ListAnimations
   ]
 })
 export class LoadingComponent implements OnInit {
@@ -17,11 +18,23 @@ export class LoadingComponent implements OnInit {
 	}
 
   loadingStatus: string = '';
+  items: number[] = [];
 
 	ngOnInit() {
 	}
 
+  ngAfterViewInit() {
+	  this.items = [1, 2, 3, 4, 5];
+  }
+
   toggleStatus() {
+	  const r: number = Math.ceil(Math.random() * 100);
     this.loadingStatus = this.loadingStatus === 'start' ? 'end': 'start';
+    this.items = [];
+
+    setTimeout(() => {
+      this.items = [r + 1, r + 2, r + 3, r + 4, r + 5];
+    }, 500);
+
   }
 }
