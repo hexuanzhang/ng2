@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Loading01Animations, Loading02Animations } from '../animation-config';
+import { Loading01Animations, Loading02Animations, Loading04Animations } from '../animation-config';
 
 @Component({
 	selector: 'loading',
@@ -7,7 +7,8 @@ import { Loading01Animations, Loading02Animations } from '../animation-config';
   styleUrls: ['./loading.scss'],
   animations: [
     Loading01Animations,
-    Loading02Animations
+    Loading02Animations,
+    Loading04Animations
   ]
 })
 export class LoadingComponent implements OnInit {

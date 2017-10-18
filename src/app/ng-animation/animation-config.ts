@@ -1,4 +1,4 @@
-import { trigger, state, style, transition, animate, keyframes, animation, useAnimation } from  '@angular/animations';
+import { trigger, state, style, transition, animate, keyframes, animation, useAnimation, query } from  '@angular/animations';
 
 // animations
 const Loading02Animation = animation([
@@ -34,5 +34,13 @@ export const Loading02Animations = [
         'step3-opacity': '0'
       }
     })])
+  ])
+];
+
+export const Loading04Animations = [
+  trigger('loading04Trigger', [
+    transition('void => *, end => start, start => end',[
+      query('.box-04 div', [loadingAnimate])
+    ])
   ])
 ];
