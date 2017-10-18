@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { LoadingAnimations, LoadingDelayAnimations } from '../animation-config';
+import { Loading01Animations, Loading02Animations } from '../animation-config';
 
 @Component({
 	selector: 'loading',
 	templateUrl: './loading.html',
   styleUrls: ['./loading.scss'],
   animations: [
-    LoadingAnimations,
-    LoadingDelayAnimations
+    Loading01Animations,
+    Loading02Animations
   ]
 })
 export class LoadingComponent implements OnInit {

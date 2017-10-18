@@ -1,8 +1,12 @@
-import { trigger, state, style, transition, animate, keyframes, animation } from  '@angular/animations';
+import { trigger, state, style, transition, animate, keyframes, animation, useAnimation } from  '@angular/animations';
 
 // animations
-const LoadingAnimation = animation([
-
+const Loading02Animation = animation([
+  animate("{{ timing }}", keyframes([
+    style({ transform: "{{ step1-transform }}", opacity: "{{ step1-opacity }}"} ),
+    style({ transform: "{{ step2-transform }}", opacity: "{{ step2-opacity }}"} ),
+    style({ transform: "{{ step3-transform }}", opacity: "{{ step3-opacity }}"} )
+  ]))
 ]);
 
 const loadingAnimate = animate('3.5s linear',keyframes([
@@ -11,16 +15,24 @@ const loadingAnimate = animate('3.5s linear',keyframes([
   style({transform: 'rotate(360deg)', offset: 1}),
 ]));
 
-export const LoadingAnimations = [
-    trigger('loadingTrigger', [
+export const Loading01Animations = [
+    trigger('loading01Trigger', [
         transition('void => *, start => end, end => start', [loadingAnimate])
     ])
 ];
 
-export const LoadingDelayAnimations = [
-  trigger('loadingDelayTrigger', [
-    transition('void => *, start => end, end => start', [loadingAnimate], {
-      delay: 10
-    })
+export const Loading02Animations = [
+  trigger('loading02Trigger', [
+    transition('void => *, end => start, start => end', [useAnimation(Loading02Animation, {
+      params: {
+        timing: '1s ease-out',
+        'step1-transform': 'scale(0)',
+        'step1-opacity': '0',
+        'step2-transform': 'scale(.5)',
+        'step2-opacity' : '1',
+        'step3-transform': 'scale(1)',
+        'step3-opacity': '0'
+      }
+    })])
   ])
 ];
