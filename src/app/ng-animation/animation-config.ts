@@ -43,7 +43,7 @@ export const Loading02Animations = [
 export const Loading04Animations = [
   trigger('loading04Trigger', [
     transition('void => *, end => start, start => end',[
-      query('.box-04 div', [loadingAnimate], { optional: true })
+      query('.box-04 div', [loadingAnimate], { optional: true, limit: 10 })
     ])
   ])
 ];
@@ -54,10 +54,8 @@ export const ListAnimations = [
       query(":enter", style({opacity: 0}), {optional: true}),
 
       query(':enter', stagger('150ms', [
-        animate('1000ms ease-in', style({opacity: 1}))
+        animate('100ms ease-in', style({opacity: 1}))
       ]), {optional: true}),
-
-
 
       query(':leave', stagger('100ms reverse', [
         animate('100ms ease-out', style({opacity: 0}))
