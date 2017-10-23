@@ -3,7 +3,7 @@
 		<ul nz-menu [nzMode]="'inline'" class="menu">
 			<ng-template ngFor let-item [ngForOf]="menu">
 				<div *ngIf="item.children; then menus else items"></div>
-				
+
 				<ng-template #menus>
 					<li nz-submenu>
 						<span title>
@@ -13,7 +13,7 @@
 						<ul *ngIf="item.children">
 							<ng-template ngFor let-child [ngForOf]="item.children">
 								<div *ngIf="child.children; then submenu else menuItem"></div>
-								
+
 								<ng-template #submenu>
 									<li nz-submenu>
 										<span title>{{child.name}}</span>
@@ -26,7 +26,7 @@
 										</ul>
 									</li>
 								</ng-template>
-								
+
 								<ng-template #menuItem>
 									<li nz-menu-item [routerLinkActive]="'ant-menu-item-selected'"
 									    [routerLink]="['/' + item.router + '/' + child.router]">
@@ -37,7 +37,7 @@
 						</ul>
 					</li>
 				</ng-template>
-				
+
 				<ng-template #items>
 					<li nz-menu-item [routerLinkActive]="'ant-menu-item-selected'"
 					    [routerLinkActive]="'ant-menu-item-selected'">
@@ -53,8 +53,8 @@
 	<nz-layout>
 		<nz-header class="nz-header"></nz-header>
 		<nz-content class="nz-content">
-			<div class="content">
-				<router-outlet></router-outlet>
+			<div class="content" [@routeAnimation]="getRouteAnimation(route)">
+				<router-outlet #route="outlet"></router-outlet>
 			</div>
 		</nz-content>
 	</nz-layout>
