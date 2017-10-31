@@ -111,7 +111,11 @@ export const menus = [
     children: [
       {
         name: 'reflectiveInjector',
-        value: 'reflectiveInjector'
+        router: 'reflectiveInjector'
+      },
+      {
+        name: 'viewContainerRef',
+        router: 'viewContainerRef'
       }
     ]
   },

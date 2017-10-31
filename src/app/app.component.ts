@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
 	ngOnInit() {}
 
   getRouteAnimation(outlet: any) {
-	  console.warn(outlet.activatedRouteData.animation);
+	  // console.warn(outlet.activatedRouteData.animation);
     return outlet.activatedRouteData.animation;
   }
 }

@@ -26,7 +26,7 @@ export class ReflectiveInjectorComponent implements OnInit {
   ngOnInit() {
     const square_injector: Injector = ReflectiveInjector.resolveAndCreate([Square]),
       square: Square = square_injector.get(Square);
-    console.info(square instanceof Square, square);
+    // console.info(square instanceof Square, square);
 
     const engine_injector = ReflectiveInjector.resolveAndCreate([Engine]),
       car_injector: Injector = engine_injector.resolveAndCreateChild([Car]);

@@ -8,6 +8,10 @@ let childrenComponents = [
     loadChildren: '../ng-di/reflectiveInjector/reflectiveInjector.module#ReflectiveInjectorModule'
   },
   {
+    path: 'viewContainerRef',
+    loadChildren: '../ng-di/viewContainerRef/viewContainerRef.module#ViewContainerRefModule'
+  },
+  {
     path: '**',
     redirectTo: 'reflectiveInjector'
   }
