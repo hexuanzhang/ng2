@@ -28,10 +28,11 @@ export class LoadingComponent implements OnInit {
   items02: number[] = [];
 
   ngOnInit() {
+    this.items = this.items02 = [1, 2, 3, 4, 5]
   }
 
   ngAfterViewInit() {
-    this.items = this.items02 = [1, 2, 3, 4, 5];
+    // this.items = this.items02 = [1, 2, 3, 4, 5];
   }
 
   toggleStatus() {
