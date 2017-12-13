@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export class UserService {
 	constructor() {
 	}
-	
+
 	get isLogin() {
 		return true;
 	}

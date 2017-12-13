@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SharedModule } from '../../shared/shared.module';
 import { ViewChildComponent } from './viewChild.component';
 import { NumberComponent } from './number.component';
-import { ChangeColorDirective } from './changeColor.directive'
+import { ChangeColorDirective } from './changeColor.directive';
 
 import { TodoComponent } from './todo/todo.component';
 import { TodoInputComponent } from './todo/todoInput.component';
@@ -36,3 +36,4 @@ export class RoutingModule {
 
 export class ViewChildModule {
 }
+

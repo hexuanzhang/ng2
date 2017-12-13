@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-@Component ({
+@Component({
 	selector: 'ng-style',
 	templateUrl: './ng-style.html',
 	styles: [`
-		span { 
+		span {
 			display: inline-block;
 			border: 1px solid #ccc;
 			text-align: center;
@@ -14,10 +14,10 @@ import { Component, OnInit } from '@angular/core';
 	`]
 })
 export class NgStyleComponent implements OnInit {
-	constructor () {}
-	
-	ngOnInit() {}
-	
+	constructor() { }
+
+	ngOnInit() { }
+
 	calculateStyles() {
 		return {
 			'width.px': 100

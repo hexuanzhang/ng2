@@ -9,7 +9,7 @@ import { Component, Input, HostBinding } from '@angular/core';
 		button {
 			color: #03a9f4;
 		}
-		
+
 		button.hover {
 			color: blue;
 		}
@@ -18,5 +18,6 @@ import { Component, Input, HostBinding } from '@angular/core';
 export class HostBindingComponent {
 	constructor() {
 	}
-	
+
 }
+

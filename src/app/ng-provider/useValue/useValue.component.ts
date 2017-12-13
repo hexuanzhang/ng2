@@ -10,8 +10,8 @@ import { USEVALUE_CONFIG, Use_Value_CONFIG } from './useValue.config';
 })
 export class UseValueComponent {
 	title: string;
-	
-	constructor(@Inject(USEVALUE_CONFIG) public config: Config) {
+
+	constructor( @Inject(USEVALUE_CONFIG) public config: Config) {
 		this.title = this.config.title;
 	}
 }

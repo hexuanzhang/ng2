@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
 export class NumberComponent {
 	message: string = 'Counter：0';
 	count: number = 0;
-	
+
 	increaseByOne() {
 		this.message = `Counter: ${++this.count}`;
 	}
-	
+
 	decreaseByOne() {
 		this.message = `Counter: ${--this.count}`;
 	}

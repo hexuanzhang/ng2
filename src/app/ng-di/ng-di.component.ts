@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
-@Component ({
+@Component({
 	selector: 'ng-di',
 	templateUrl: './ng-di.html',
 })
 export class NgDiComponent {
-	constructor () {}
+	constructor() { }
 }

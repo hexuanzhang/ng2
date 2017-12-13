@@ -2,7 +2,7 @@ import { Routes, RouterModule, Resolve } from '@angular/router';
 import { NgCoreComponent } from '../ng-core/ng-core.component';
 import { NgModule } from '@angular/core';
 
-let childrenComponents = [
+const childrenComponents = [
 	{
 		path: 'viewChild',
 		loadChildren: '../ng-core/viewChild/viewChild.module#ViewChildModule'
@@ -27,3 +27,4 @@ export const NgCoreRouters: Routes = [
 })
 export class NgCoreRouterModule {
 }
+

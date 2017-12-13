@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-@Component ({
+@Component({
 	selector: 'ng-deep',
 	template: `
 		<h3>::ng-deep 选择器</h3>
@@ -13,6 +13,6 @@ import { Component } from '@angular/core';
 	`]
 })
 export class NgDeepComponent {
-	
-	constructor() {}
+
+	constructor() { }
 }

@@ -9,63 +9,63 @@ export const AppRoutes: Routes = [
 	{
 		path: 'index',
 		component: IndexComponent,
-    data: {
-		  animation: 'index'
-    }
+		data: {
+			animation: 'index'
+		}
 	},
 
 	// 内置指令
 	{
 		path: 'directive',
 		loadChildren: './ng-directive/ng-directive.module#NgDirectiveModule',
-    data: {
-      animation: 'directive'
-    }
+		data: {
+			animation: 'directive'
+		}
 	},
 
 	// 装饰器
 	{
 		path: 'decorator',
 		loadChildren: './ng-decorator/ng-decorator.module#NgDecoratorModule',
-    data: {
-      animation: 'decorator'
-    }
+		data: {
+			animation: 'decorator'
+		}
 	},
 
 	// core
 	{
 		path: 'core',
 		loadChildren: './ng-core/ng-core.module#NgCoreModule',
-    data: {
-      animation: 'core'
-    }
+		data: {
+			animation: 'core'
+		}
 	},
 
 	{
 		path: 'provider',
 		loadChildren: './ng-provider/ng-provider.module#NgProviderModule',
-    data: {
-      animation: 'provider'
-    }
+		data: {
+			animation: 'provider'
+		}
 	},
 
-  // di
-  {
-    path: 'di',
-    loadChildren: './ng-di/ng-di.module#NgDiModule',
-    data: {
-      animation: 'di'
-    }
-  },
+	// di
+	{
+		path: 'di',
+		loadChildren: './ng-di/ng-di.module#NgDiModule',
+		data: {
+			animation: 'di'
+		}
+	},
 
-  // animation
-  {
-    path: 'animation',
-    loadChildren: './ng-animation/ng-animation.module#NgAnimationModule',
-    data: {
-      animation: 'animation'
-    }
-  },
+	// animation
+	{
+		path: 'animation',
+		loadChildren: './ng-animation/ng-animation.module#NgAnimationModule',
+		data: {
+			animation: 'animation'
+		}
+	},
 
 	// 默认重定向到首页
 	{

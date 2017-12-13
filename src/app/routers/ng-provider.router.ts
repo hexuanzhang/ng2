@@ -2,7 +2,7 @@ import { Routes, RouterModule, Resolve } from '@angular/router';
 import { NgProviderComponent } from '../ng-provider/ng-provider.component';
 import { NgModule } from '@angular/core';
 
-let childrenComponents = [
+const childrenComponents = [
 	{
 		path: 'useClass',
 		loadChildren: '../ng-provider/useClass/useClass.module#UseClassModule'
@@ -31,10 +31,10 @@ let childrenComponents = [
 		path: 'injectionToken',
 		loadChildren: '../ng-provider/injectionToken/injectionToken.module#InjectionTokenModule'
 	},
-  {
-    path: 'optional',
-    loadChildren: '../ng-provider/optional/optional.module#OptionalModule'
-  },
+	{
+		path: 'optional',
+		loadChildren: '../ng-provider/optional/optional.module#OptionalModule'
+	},
 	{
 		path: '**',
 		redirectTo: 'useClass'

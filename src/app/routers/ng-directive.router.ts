@@ -2,7 +2,7 @@ import { Routes, RouterModule, Resolve } from '@angular/router';
 import { NgDirectiveComponent } from '../ng-directive/ng-directive.component';
 import { NgModule } from '@angular/core';
 
-let childrenComponents = [
+const childrenComponents = [
 	{
 		path: 'ng-class',
 		loadChildren: '../ng-directive/ng-class/ng-class.module#NgClassModule'

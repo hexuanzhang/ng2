@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class UserService {
-	constructor() {}
-	
+	constructor() { }
+
 	get user() {
 		return {
 			name: `test`
-		}
+		};
 	}
 }

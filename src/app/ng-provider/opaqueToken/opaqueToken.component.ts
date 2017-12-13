@@ -22,20 +22,22 @@ const PROVIDE_TOKENS = ['app_info', 'feature_enabled'];
 	]
 })
 export class OpaqueTokenComponent implements OnInit {
-	
-	constructor(@Inject(PROVIDE_TOKENS[0]) private appInfo,
-	            @Inject(PROVIDE_TOKENS[1]) private featureEnabled) {
+
+	constructor( @Inject(PROVIDE_TOKENS[0]) private appInfo,
+		@Inject(PROVIDE_TOKENS[1]) private featureEnabled) {
 	}
-	
+
 	app: any = {
 		version: '--',
 		name: '--'
 	};
-	
+
 	ngOnInit() {
 		// console.info(new OpaqueToken('test') === new OpaqueToken('test'));
-		
-		this.featureEnabled && (this.app = this.appInfo);
+
+		if (this.featureEnabled) {
+			this.app = this.appInfo;
+		}
 	}
-	
+
 }

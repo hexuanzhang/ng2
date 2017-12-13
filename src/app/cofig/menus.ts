@@ -99,34 +99,34 @@ export const menus = [
 				name: 'injectionToken',
 				router: 'injectionToken'
 			},
-      {
-        name: 'optional',
-        router: 'optional'
-      }
+			{
+				name: 'optional',
+				router: 'optional'
+			}
 		]
 	},
-  {
-    name: 'di',
-    router: 'di',
-    children: [
-      {
-        name: 'reflectiveInjector',
-        router: 'reflectiveInjector'
-      },
-      {
-        name: 'viewContainerRef',
-        router: 'viewContainerRef'
-      }
-    ]
-  },
-  {
-    name: 'animation',
-    router: 'animation',
-    children: [
-      {
-        name: 'loading',
-        value: 'loading'
-      }
-    ]
-  }
+	{
+		name: 'di',
+		router: 'di',
+		children: [
+			{
+				name: 'reflectiveInjector',
+				router: 'reflectiveInjector'
+			},
+			{
+				name: 'viewContainerRef',
+				router: 'viewContainerRef'
+			}
+		]
+	},
+	{
+		name: 'animation',
+		router: 'animation',
+		children: [
+			{
+				name: 'loading',
+				value: 'loading'
+			}
+		]
+	}
 ];

@@ -11,12 +11,13 @@ import { UserService } from './user.service';
 export class UseClassComponent implements OnInit {
 	constructor(public logger: LoggerService, public betterLogger: BetterLoggerService) {
 	}
-	
+
 	message: string;
 	betterMessage: string;
-	
+
 	ngOnInit() {
 		this.message = this.logger.log('useClass');
 		this.betterMessage = this.betterLogger.log('userClass');
 	}
 }
+

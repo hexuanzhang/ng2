@@ -6,24 +6,24 @@ import { SharedModule } from '../../shared/shared.module';
 const component = ReflectiveInjectorComponent;
 
 const UIRouters: Routes = [
-  {
-    path: '', component
-  }
+	{
+		path: '', component
+	}
 ];
 
 const UIRouting = RouterModule.forChild(UIRouters);
 
 @NgModule({
-  imports: [UIRouting],
-  exports: [RouterModule]
+	imports: [UIRouting],
+	exports: [RouterModule]
 })
 export class RoutingModule {
 }
 
 @NgModule({
-  imports: [RoutingModule, SharedModule.share()],
-  declarations: [component],
-  providers: []
+	imports: [RoutingModule, SharedModule.share()],
+	declarations: [component],
+	providers: []
 })
 
 export class ReflectiveInjectorModule {

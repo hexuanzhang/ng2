@@ -2,7 +2,7 @@ import { Routes, RouterModule, Resolve } from '@angular/router';
 import { NgDecoratorComponent } from '../ng-decorator/ng-decorator.component';
 import { NgModule } from '@angular/core';
 
-let childrenComponents = [
+const childrenComponents = [
 	{
 		path: 'hostListener',
 		loadChildren: '../ng-decorator/hostListener/hostListener.module#HostListenerModule'
@@ -31,3 +31,4 @@ export const NgDecoratorRouters: Routes = [
 })
 export class NgDecoratorRouterModule {
 }
+

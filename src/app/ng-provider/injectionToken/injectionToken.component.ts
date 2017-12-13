@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject, InjectionToken } from '@angular/core';
 import { FEATURE_ENABLED, APP_INFO } from './config';
+import { Observable } from 'Rxjs';
 
 const PROVIDE_TOKENS = [new InjectionToken<string>('app_info'), new InjectionToken<string>('feature_enabled')];
 
@@ -13,8 +14,7 @@ const PROVIDE_TOKENS = [new InjectionToken<string>('app_info'), new InjectionTok
 })
 export class InjectionTokenComponent implements OnInit {
 
-	constructor(@Inject(PROVIDE_TOKENS[0]) private appInfo,
-	            @Inject(PROVIDE_TOKENS[1]) private featureEnabled) {
+	constructor( @Inject(PROVIDE_TOKENS[0]) private appInfo, @Inject(PROVIDE_TOKENS[1]) private featureEnabled) {
 	}
 
 	app: any = {
@@ -23,9 +23,11 @@ export class InjectionTokenComponent implements OnInit {
 	};
 
 	ngOnInit() {
-		console.info(new InjectionToken<string>('test') === new InjectionToken<string>('test'));
+		// console.info(new InjectionToken<string>('test') === new InjectionToken<string>('test'));
 
-		this.featureEnabled && (this.app = this.appInfo);
+		if (this.featureEnabled) {
+			this.app = this.appInfo;
+		}
 	}
 
 }

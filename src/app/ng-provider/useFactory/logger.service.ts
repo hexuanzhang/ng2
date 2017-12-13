@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class LoggerService {
-  constructor() {
-  }
+	constructor() {
+	}
 
-  public log(str: string) {
-    console.info(str);
-  }
+	public log(str: string) {
+		// console.info(str);
+	}
 }

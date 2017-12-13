@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-@Component ({
+@Component({
 	selector: 'ng-class',
 	templateUrl: './ng-class.html',
 	styles: [`
@@ -19,20 +19,20 @@ import { Component, OnInit } from '@angular/core';
 	`]
 })
 export class NgClassComponent implements OnInit {
-	constructor () {}
-	
+	constructor() { }
+
 	isActive: boolean;
-	
+
 	ngOnInit() {
 		this.isActive = true;
 	}
-	
+
 	calculateClasses() {
-		
+
 		/* 可以返回 string、string[]、obj */
 		return {
 			btn: true,
 			'btn-primary': this.isActive
-		}
+		};
 	}
 }

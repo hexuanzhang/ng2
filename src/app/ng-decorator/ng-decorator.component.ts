@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
-@Component ({
+@Component({
 	selector: 'ng-decorator',
 	templateUrl: './ng-decorator.html',
 })
 export class NgDecoratorComponent {
-	constructor () {}
+	constructor() { }
 }

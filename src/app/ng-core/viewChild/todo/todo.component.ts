@@ -9,10 +9,10 @@ import { Todo } from './todo.interface';
 		}
 	`],
 	template: `
-		<div [class.completed]="todo.completed">
-			<input type="checkbox"
-			       [(ngModel)]="todo.completed"
-			       (change)="completionChanged(todo)">
+		<div [class.completed]='todo.completed'>
+			<input type='checkbox'
+			       [(ngModel)]='todo.completed'
+			       (change)='completionChanged(todo)'>
 			{{todo.title}}
 		</div>
 	`
@@ -20,8 +20,9 @@ import { Todo } from './todo.interface';
 export class TodoComponent {
 	@Output() onCompletionChange = new EventEmitter<Todo>();
 	@Input() todo: Todo;
-	
+
 	completionChanged(todo: Todo) {
 		this.onCompletionChange.emit(todo);
 	}
 }
+

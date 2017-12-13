@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-@Component ({
+@Component({
 	selector: 'ng-hidden',
 	templateUrl: './ng-hidden.html',
 	styles: [`
@@ -13,14 +13,14 @@ import { Component, OnInit } from '@angular/core';
 	`]
 })
 export class NgHiddenComponent implements OnInit {
-	constructor () {}
-	
+	constructor() { }
+
 	isHidden: boolean;
-	
+
 	ngOnInit() {
 		this.isHidden = false;
 	}
-	
+
 	switchStatus() {
 		this.isHidden = !this.isHidden;
 	}

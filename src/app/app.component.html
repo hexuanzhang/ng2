@@ -18,9 +18,7 @@
 									<li nz-submenu>
 										<span title>{{child.name}}</span>
 										<ul>
-											<li *ngFor="let subChild of child.children" nz-menu-item
-											    [routerLink]="['/' + item.router + '/' + subChild.router]"
-											    [routerLinkActive]="'ant-menu-item-selected'">
+											<li *ngFor="let subChild of child.children" nz-menu-item [routerLink]="['/' + item.router + '/' + subChild.router]" [routerLinkActive]="'ant-menu-item-selected'">
 												{{subChild.name}}
 											</li>
 										</ul>
@@ -28,8 +26,7 @@
 								</ng-template>
 
 								<ng-template #menuItem>
-									<li nz-menu-item [routerLinkActive]="'ant-menu-item-selected'"
-									    [routerLink]="['/' + item.router + '/' + child.router]">
+									<li nz-menu-item [routerLinkActive]="'ant-menu-item-selected'" [routerLink]="['/' + item.router + '/' + child.router]">
 										{{child.name}}
 									</li>
 								</ng-template>
@@ -39,8 +36,7 @@
 				</ng-template>
 
 				<ng-template #items>
-					<li nz-menu-item [routerLinkActive]="'ant-menu-item-selected'"
-					    [routerLinkActive]="'ant-menu-item-selected'">
+					<li nz-menu-item [routerLinkActive]="'ant-menu-item-selected'">
 						<span title>
 							<i class="anticon anticon-appstore"></i>
 							{{item.name}}
@@ -59,8 +55,3 @@
 		</nz-content>
 	</nz-layout>
 </nz-layout>
-
-
-
-
-

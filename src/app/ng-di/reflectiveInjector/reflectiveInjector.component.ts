@@ -2,7 +2,7 @@ import { Component, OnInit, ReflectiveInjector, Injector, Injectable } from '@an
 
 @Injectable()
 class Square {
-  name: 'square'
+	name: 'square';
 }
 
 @Injectable()
@@ -11,25 +11,25 @@ class Engine {
 
 @Injectable()
 class Car {
-  constructor(public engine: Engine) {
-  }
+	constructor(public engine: Engine) {
+	}
 }
 
 @Component({
-  selector: 'reflectiveInjector',
-  templateUrl: './reflectiveInjector.html'
+	selector: 'reflectiveInjector',
+	templateUrl: './reflectiveInjector.html'
 })
 export class ReflectiveInjectorComponent implements OnInit {
 
-  constructor() { }
+	constructor() { }
 
-  ngOnInit() {
-    const square_injector: Injector = ReflectiveInjector.resolveAndCreate([Square]),
-      square: Square = square_injector.get(Square);
-    // console.info(square instanceof Square, square);
+	ngOnInit() {
+		const square_injector: Injector = ReflectiveInjector.resolveAndCreate([Square]),
+			square: Square = square_injector.get(Square);
+		// console.info(square instanceof Square, square);
 
-    const engine_injector = ReflectiveInjector.resolveAndCreate([Engine]),
-      car_injector: Injector = engine_injector.resolveAndCreateChild([Car]);
-  }
+		const engine_injector = ReflectiveInjector.resolveAndCreate([Engine]),
+			car_injector: Injector = engine_injector.resolveAndCreateChild([Car]);
+	}
 
 }

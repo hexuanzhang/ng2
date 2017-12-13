@@ -6,7 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
 	imports: [NgDirectiveRoutingModule, SharedModule.share()],
-	declarations: [ NgDirectiveComponent ],
+	declarations: [NgDirectiveComponent],
 	exports: []
 })
-export class NgDirectiveModule {}
+export class NgDirectiveModule { }

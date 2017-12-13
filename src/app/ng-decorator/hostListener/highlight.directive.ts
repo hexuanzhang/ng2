@@ -6,7 +6,7 @@ import { Directive, HostListener, ElementRef, Renderer } from '@angular/core';
 export class HighlightDirective {
 	constructor(private el: ElementRef, private renderer: Renderer) {
 	}
-	
+
 	@HostListener('document:click', ['$event'])
 	onClick(e: Event) {
 		if (this.el.nativeElement.contains(e.target)) {
@@ -15,7 +15,7 @@ export class HighlightDirective {
 			this.highlight(null);
 		}
 	}
-	
+
 	highlight(color: string) {
 		this.renderer.setElementStyle(this.el.nativeElement, 'backgroundColor', color);
 	}
