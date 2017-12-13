@@ -73,27 +73,27 @@
 	border-radius: 50%;
 }
 
-.loader-03, .loader-04{
-  display: block;
+.loader-03, .loader-04 {
+	display: block;
 
-  position: relative;
+	position: relative;
 
-  overflow: hidden;
+	overflow: hidden;
 
-  width: 200px;
-  height: 200px !important;
+	width: 200px;
+	height: 200px !important;
 
-  &, & div {
-    height: 100%;
-    padding: 8px;
+	&, & div {
+		height: 100%;
+		padding: 8px;
 
-    border: 2px solid transparent;
-    border-top-color: rgba(0, 0, 0, .5);
-    border-bottom-color: rgba(0, 0, 255, .5);
-    border-radius: 50%;
-  }
+		border: 2px solid transparent;
+		border-top-color: rgba(0, 0, 0, .5);
+		border-bottom-color: rgba(0, 0, 255, .5);
+		border-radius: 50%;
+	}
 
-  &, & * {
-    will-change: transform;
-  }
+	&, & * {
+		will-change: transform;
+	}
 }
