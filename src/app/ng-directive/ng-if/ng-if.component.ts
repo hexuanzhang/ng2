@@ -12,6 +12,8 @@ export class NgIfComponent implements OnInit {
 	isActive: boolean = false;
 	asyncObj: Observable<any>;
 
+	condition: string = 'locale';
+
 	ngOnInit() {
 		this.asyncObj = this.getObservable();
 	}

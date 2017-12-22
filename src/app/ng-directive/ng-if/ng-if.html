@@ -19,3 +19,7 @@
 <ng-template #loading let-obj>
 	<h3>loading... obj is {{ obj | json}}</h3>
 </ng-template>
+
+<ng-container *ngIf="condition as value; else elseBlock">{{value}}</ng-container>
+<ng-template #elseBlock>...</ng-template>
+
