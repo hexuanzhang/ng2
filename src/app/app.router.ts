@@ -67,6 +67,15 @@ export const AppRoutes: Routes = [
 		}
 	},
 
+	// others
+	{
+		path: 'others',
+		loadChildren: './ng-others/ng-others.module#NgOthersModule',
+		data: {
+			animation: 'others'
+		}
+	},
+
 	// 默认重定向到首页
 	{
 		path: '**',

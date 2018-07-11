@@ -128,5 +128,15 @@ export const menus = [
 				value: 'loading'
 			}
 		]
+	},
+	{
+		name: 'others',
+		router: 'others',
+		children: [
+			{
+				name: 'encrypt',
+				value: 'encrypt'
+			}
+		]
 	}
 ];
