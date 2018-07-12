@@ -1,6 +1,6 @@
 <div nz-row>
 	<div nz-col [nzSpan]='8'>
-		<nz-input [(ngModel)]="str" [nzType]="'textarea'" [nzRows]="'4'" [nzPlaceHolder]="'请输入待加密信息'"></nz-input>
+		<nz-input [(ngModel)]="plainText" [nzType]="'textarea'" [nzRows]="'4'" [nzPlaceHolder]="'请输入待加密信息'"></nz-input>
 	</div>
 	<ul nz-col [nzSpan]='8' class="buttonGroup">
 		<li>
@@ -15,6 +15,6 @@
 		</li>
 	</ul>
 	<div nz-col [nzSpan]='8'>
-		<nz-input [(ngModel)]="encryptStr" [nzType]="'textarea'" [nzRows]="'4'" [nzPlaceHolder]="''"></nz-input>
+		<nz-input [(ngModel)]="cypherText" [nzType]="'textarea'" [nzRows]="'4'" [nzPlaceHolder]="''"></nz-input>
 	</div>
 </div>

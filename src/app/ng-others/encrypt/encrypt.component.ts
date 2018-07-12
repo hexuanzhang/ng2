@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { privateKey, publicKey } from './config';
 import { JSEncrypt } from 'jsencrypt';
+import { NzMessageService } from 'ng-zorro-antd';
 
 @Component({
 	selector: 'app-encrypt',
@@ -9,25 +10,36 @@ import { JSEncrypt } from 'jsencrypt';
 })
 export class EncryptComponent implements OnInit {
 
-	str: string = ''; // 明文
-	encryptStr: string = ''; // 加密后的密文
+	plainText: string = ''; // 明文
+	cypherText: string = ''; // 加密后的密文
 
-	_encrypt: any; // JSEncrypt 实例
+	$encrypt: any; // JSEncrypt 实例
 
-	constructor() { }
+	constructor(private _message: NzMessageService) { }
 
 	ngOnInit() {
-		this._encrypt = new JSEncrypt();
+		this.$encrypt = new JSEncrypt();
 
 	}
 
 	encrypt() {
-		this._encrypt.setPublicKey(publicKey);
-		this.encryptStr = this._encrypt.encrypt(`${this.str}`.trim());
+		const text = `${this.plainText}`.trim();
+
+		// 1024 位的密钥支持明文长度最大为 127
+		if (text.length > 117) {
+			this._message.error('加密内容过长，请重新输入');
+		} else {
+			this.$encrypt.setPublicKey(publicKey);
+			this.cypherText = this.$encrypt.encrypt(text);
+		}
 	}
 
 	decrypt() {
-		this._encrypt.setPrivateKey(privateKey);
-	}
+		this.$encrypt.setPrivateKey(privateKey);
+		this.plainText = this.$encrypt.decrypt(this.cypherText);
 
+		if (Object.is(this.plainText, '')) {
+			this._message.error('解密失败');
+		}
+	}
 }
