@@ -38,7 +38,8 @@ export class EncryptComponent implements OnInit {
 		this.$encrypt.setPrivateKey(privateKey);
 		this.plainText = this.$encrypt.decrypt(this.cypherText);
 
-		if (Object.is(this.plainText, '')) {
+		// 解密失败，返回的是 nul
+		if (Object.is(this.plainText, null)) {
 			this._message.error('解密失败');
 		}
 	}
