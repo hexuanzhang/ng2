@@ -24,6 +24,10 @@ export const menus = [
 				router: 'ng-if'
 			},
 			{
+				name: 'templateOutlet 指令',
+				router: 'ng-template-outlet'
+			},
+			{
 				name: '选择器',
 				router: 'pseudo-class',
 				children: [

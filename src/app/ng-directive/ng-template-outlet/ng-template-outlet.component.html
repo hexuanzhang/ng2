@@ -1,0 +1,12 @@
+<ng-template #outlet let-text="title">
+	<h3>{{text}}</h3>
+</ng-template>
+
+<ng-template #content let-content>
+	<p>{{content}}</p>
+</ng-template>
+
+<ng-template [ngTemplateOutlet]="outlet" [ngTemplateOutletContext]="{ title: 'Header' }"></ng-template>
+<ng-template *ngTemplateOutlet="content; context: { $implicit: 'Content'} "></ng-template>
+<ng-template *ngTemplateOutlet="outlet; context: { title: 'Footer'} "></ng-template>
+

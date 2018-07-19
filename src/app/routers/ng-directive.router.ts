@@ -36,6 +36,10 @@ const childrenComponents = [
 		loadChildren: '../ng-directive/ng-hidden/ng-hidden.module#NgHiddenModule'
 	},
 	{
+		path: 'ng-template-outlet',
+		loadChildren: '../ng-directive/ng-template-outlet/ng-template-outlet.module#NgTemplateOutleteModule'
+	},
+	{
 		path: '**',
 		redirectTo: 'ng-class'
 	}
